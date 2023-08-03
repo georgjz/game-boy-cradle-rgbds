@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.13 FATAL_ERROR )
 
-# Give the project a name
+# Give the project a name. The project name will be used as the ROM name as well.
 project( rgbds-cradle
     VERSION 0.1.0
     DESCRIPTION "Simple project template for Game Boy (Color) games developed with RGBDS"
@@ -22,12 +22,10 @@ add_subdirectory( src )
 # The link file. The link file is copied into the build directory. This is a 
 # little trick to make sure the ROM is rebuilt if the link file is modified.
 set( LINK_FILE linkfile.cfg )   # Name of the link file
-
 add_custom_target(
     linkfile
     DEPENDS ${CMAKE_BINARY_DIR}/${LINK_FILE}
 )
-
 add_custom_command(
     OUTPUT ${CMAKE_BINARY_DIR}/${LINK_FILE}
     COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/${LINK_FILE} ${CMAKE_BINARY_DIR}
