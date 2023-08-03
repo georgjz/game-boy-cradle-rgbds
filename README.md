@@ -9,7 +9,7 @@ It is meant to make it easy to split your project into several files without hav
 
 ## How To Use
 
-This is a GitHub template you can [easily copy several times][https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template]. To build the example ROM, simply switch to a command line:
+This is a GitHub template you can [easily copy several times](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). To build the example ROM, simply switch to a command line:
 
 ```
 $ cmake -S . -B build 
